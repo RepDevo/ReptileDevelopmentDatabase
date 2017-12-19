@@ -32,11 +32,11 @@ test_that("Years go beyond the last search date", {
 # Note that this will break as soon as rows change order...example entering new, older data. 
 test_that("Check structural integrity of temperatures...", {
 	expect_equal(database$T[1], 28, info = "Row 1 checked")
-	expect_equal(database$T[30], 29.5, info = "Row 30 checked")
+	expect_equal(database$T[30], 31, info = "Row 30 checked")
 	expect_equal(database$T[113], 17.9, info = "Row 113 checked")
 	expect_equal(database$T[2317], 24, info = "Row 2317 checked")
-	expect_equal(database$T[5954], 31, info = "Row 5954 checked")
-	expect_equal(database$T[7206], 26, info = "Row 7206 checked")
-	expect_equal(database$T[7448], 30, info = "Row 7448 checked")
-	expect_equal(database$T[7982], 32, info = "Row 7982 checked")
+	expect_equal(database$T[5954], 27, info = "Row 5954 checked")
+	expect_equal(database$T[7206], 30, info = "Row 7206 checked")
+	expect_equal(database$T[7448], 34.5, info = "Row 7448 checked")
+	expect_equal(database$T[7982], 27, info = "Row 7982 checked")
 })
