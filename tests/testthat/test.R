@@ -15,6 +15,12 @@ test_that("Trait category column contains incorrect levels", {
 })
 
 
+test_that("Error type column contains incorrect levels", {
+	levels <- sort(c("SE", "CI", "P", "NA", "SD"))
+	expect_true(setequal(levels, sort(unique(database$error_type))))
+})
+
+
 test_that("Years go beyond the last search date", {
 	version_papers <- 1662
 	expect_true(version_papers == range(database$data_no)[2])
@@ -33,4 +39,14 @@ test_that("Check structural integrity of temperatures...", {
 	expect_equal(database$T[7206], 30, info = "Row 7206 checked")
 	expect_equal(database$T[7448], 34.5, info = "Row 7448 checked")
 	expect_equal(database$T[7982], 27, info = "Row 7982 checked")
+	expect_equal(database$T[8006], 28, info = "Row 8006 checked")
+	expect_equal(database$T[8138], 26.5, info = "Row 8138 checked")
+	expect_equal(database$T[8138], 26.5, info = "Row 8138 checked")
+	expect_equal(database$T[8419], 24, info = "Row 8419 checked")
+	expect_equal(database$T[8497], 32, info = "Row 8497 checked")
+	expect_equal(database$T[8777], 25.5, info = "Row 8777 checked")
+	expect_equal(database$T[9091], 33, info = "Row 9091 checked")
+	expect_equal(database$T[9390], 33, info = "Row 9390 checked")
+	expect_equal(database$T[9705], 30, info = "Row 9705 checked")
+	expect_equal(database$T[9757], 29.5, info = "Row 9757 checked")
 })
