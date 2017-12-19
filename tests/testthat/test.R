@@ -14,12 +14,6 @@ test_that("Trait category column contains incorrect levels", {
 	expect_true(setequal(levels, sort(unique(database$trait_cat))))
 })
 
-# Check that the correct years and paper range have been entered
-test_that("Years go beyond the last search date", {
-	version_year <- 2016
-	expect_true(version_year == range(database$pub_year)[2])
-})
-
 
 test_that("Years go beyond the last search date", {
 	version_papers <- 1662
