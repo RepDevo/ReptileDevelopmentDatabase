@@ -1,4 +1,4 @@
-# Reptile Development Database (RepDevo)
+# Reptile Development Database (RepDevo)[![DOI](https://zenodo.org/badge/99314891.svg)](https://zenodo.org/badge/latestdoi/99314891)
 
 ![database logo2](https://user-images.githubusercontent.com/3505482/33988027-184f05b6-e117-11e7-859a-db4480b7c14c.jpg)
 
