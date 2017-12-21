@@ -1,0 +1,138 @@
+"""Citations.csv"" Metadata",,
+Column,Description,
+paper_no,Unique number assigned to each manuscript data was extracted from,
+,,
+first_author_surname,The surname of the first author on the manuscript data was extracted from,
+,,
+authors,"All authors on the manuscript, and ordered as specified when published",
+,,
+year,Year of manuscript publication ,
+,,
+title,Title of the publication,
+,,
+journal,The name of the journal the article was published in,
+,,
+volume,Volume of the journal the publication belongs to,
+,,
+issue,"Issue of the journal as appropriate; If this was not specified, then the cell was filled in with “NA”",
+,,
+pages,The range of pages of the publication,
+,,
+doi_stableurl,"An internet link to the publication as appropriate. Typically, this is either its DOI, a stable URL, or a link to the publication on ResearchGate. If unable to locate a URL, then cell filled with “NA”",
+,,
+abstract,Abstract of the publication,
+,,
+used,“Y”: the publication was included in the database,
+,“N”: the database was  excluded from the database a “Partially”: a subset of the data within the paper was included in the database,
+,,
+excld_1,Excluded (Y/N) because the study species was viviparous,
+,,
+excld_2,Excluded (Y/N) because the methods or data were unclear,
+,,
+excld_3,Excluded (Y/N) because the study involved a designed temperature shift experiment,
+,,
+excld_4,Excluded (Y/N) because the study was not an experimental manipulation,
+,,
+excld_5,Excluded (Y/N) because the study involved hormonal experimental manipulation,
+,,
+excld_6,Excluded (Y/N) because post-hatching treatments were confounded with the temperature treatments,
+,,
+excld_7,Excluded (Y/N) because the paper was inaccessible,
+,,
+excld_8,"Excluded (Y/N) for another reason, that is not specified above",
+comments,"Text to specify comments for any other reason the paper was excluded, or to provide more details about the manuscript.",
+,,
+"""Database.csv"" Metadata",,
+Column,Values,Description
+data_no,Integer from 1000 onwards,Unique number assigned to each manuscript or unpublished dataset 
+first_author_surname,Variable,The surname of the first author on the manuscript data was extracted from
+pub_year,Variable,Year the manuscript data was extracted from was published
+order,Crocodilia ,Order of the reptile of study species
+,Rhynchocephalia,
+,Squamata,
+,Testudines,
+family,Variable,Family of the reptile of the study species
+genus,Variable,The genus name of the study species
+species,Variable,The species name of the study species
+genus_timetree,Variable,The genus name of the study species in the time-tree database (http://www.timetree.org/). When a study species was not found genus name was kept the same as the paper.
+species_timetree,Variable,The species name of the study species in the time-tree database (http://www.timetree.org/). When a study species was not found species name was kept the same as the paper
+latin_name,Variable,The full latin name (genus and species) of the reptile of study
+location,Variable,Location of study. If not specified in the publication then stated to be “unspecified”. 
+population,Variable,"“pop1”, “pop2”, etc: if means within a manuscript were from independent populations (e.g., different species within the same location, across different geographic locations) "
+,,“all_pops”: if means were presented for all populations pooled
+data_year,Mostly numeric,"Numeric: the year or years in which the data were collected, if specified; includes range of years and separate years for data within a single dataset"
+,,“all_years”: if means for multiple years of data collected were pooled 
+,,"“year1”, “year2”, etc: if methods indicate that data were collected within a particular year, but the date was not specified"
+,,“NA”:  if it was the year(s) were unspecified
+egg_design,independent,Reflecting how eggs were allocated to each incubation treatment. 
+,independent_pseudo,“independent”: each incubation treatment consisted of eggs from independent females with no repeated samples from a single female clutch
+,other,"“independent_pseudo”: each incubation treatment treated eggs from the same female as replicates, but there were separate clutches within each treatment (i.e. eggs were not split across treatments) "
+,split_clutch,“split_clutch”: distributed a single egg from each clutch within each of the incubation treatments 
+,split_psuedo,"“split_psuedo”: distributed eggs from a single clutch evenly across multiple incubation treatments, but eggs from the same clutch were in the same incubation treatment"
+,,“other”: not possible to determine the egg allocation strategy
+source_page,Numeric,The page within the manuscript that the data was extracted from
+source,Variable FigNo.,The specific location within the manuscript from where the data was extracted; or ‘author’ if data were supplied via contact with an author of the publication 
+,Variable TableNo.,
+,Text,
+,Author,
+trait_cat,Incubation,"Each trait was assigned to one of seven traits categories. Examples of traits included in each category include: Incubation – time to hatching in days; Behaviour – Activity, latency to a behaviour; Development – growth rates of various body regions (snout-vent length, mass, head width and length); Morphology – Mass, snout-vent-length, head width and length, carapace width and length, usually presented in mm and grams; Performance – Sprint speed, maximal run distance, time to run, swimming speed, bite force and pull force, usually in m/s, m, Newtons (N); Physiology – generally hormone concentrations (e.g. testosterone, estrogen), metabolic rate (e.g., VC02/ V02 per time), Carcass ash, dry mass, energy and water content; Survival – primarily contains hatching success, but also survival to a particular age."
+,Behaviour,
+,Development,
+,Morphology,
+,Performance,
+,Physiology,
+,Survival,
+trait,Variable,The name of the phenotypic trait 
+simp_trait,Variable,A simplified version of the name of the phenotypic traits that was used in the manuscript in order to produce summary figures for publication.
+units,Variable,The units that were used to quantify a phenotypic trait 
+egg_embryo_,Egg,Specification of the life stage at which the phenotypic trait was measured. 
+hatchling,Embryo,“Egg”: measurements of the egg or portions of the egg 
+,Hatchling,“Embryo”: measurements of pre-hatched embryos “Hatchling”: measurements of offspring at- or post-hatching.
+,,
+age,Numeric,"The age (days post-hatching) at which the phenotypic trait was measured. For survival, the age is the second census date. Egg and embryo measurements given NA."
+sex,females,“females”: all females in sample
+,males,“males”: all males in sample
+,mixed,"“mixed” mixture of sexes in the sample, or if the sample was unknown"
+,,
+other_factors,,"Describes if the phenotypic trait means integrated other confounding factors that were not otherwise specified in the database (e.g., post-hatching treatments, genetic strains or races, elevation, etc.); otherwise “NA”"
+const_fluct,Const,"Incubation temperature design. “Range” is defined as the full range of temperatures. For example, if 23 +/- 0.5C, then the range is 1 C "
+,Fluct,“Const”: range of daily temperature data ≤1 deg. C 
+,Irreg,“Fluct”: range of daily temperature data was ≥ 1 deg. C
+,Shift,"“Irreg”: temperature profiles vary idiosyncratically, or eggs were delayed before incubation treatments established"
+,,“Shift”; temperature profiles shifted during incubation between established temperature treatments as part of the experiment design
+,,
+T,Numeric,"Temperature, in degrees Celcius, of the incubation treatment "
+,,
+T_fluc,Numeric,"The total range of temperatures, in degrees Celcius, of the incubation treatment."
+,,
+water_potential,Numeric,"Water potential of treatment, if specified. Negative integers within this column represent water potential measured in kPa. The other representations of water potential reflect a wetter/drier treatment using the terms used in the manuscript. If water potential was not specified within the paper, or if it was specified using a water to vermiculite ratio, then the uncertainty in specific water potential value was represented using “NA”. "
+mean,Numeric,The mean of the phenotypic trait from the incubation treatment
+error,Numeric,The error of the phenotypic trait from the incubation treatment
+N,Numeric,The sample size of the phenotypic trait from the incubation treatment
+error_type,SE,The type of error associated with the data
+,SD,“SE”: standard error 
+,CI,“SD”: standard deviation
+,P,“CI”:  95% confidence intervals 
+,NA,"“P”: the data was a proportion of individuals within the treatment, and thus did not have error"
+,,“NA”: If the error type was not unspecified
+data_style,adj,"Specification if the data were either raw, or adjusted in some way (e.g., residuals, log transformation, etc.). "
+,raw,
+,,
+comment_code,Numeric,"Numbers associated with a comment code to specify particular issues associated about the papers. These were listed in ascending order, separated by a comma followed by a space. The comment codes represent:"
+,,1 = other
+,,2 = we assumed or calculated N 
+,,3 = N reported within the paper is conflicting
+,,4 = calculated error from paper
+,,5 = assumed error type
+,,6 = error uncertain or missing
+,,7 = unclear temperature treatment
+,,8 = back-calculated hatching success from provided sample sizes
+,,9 = data pooled between two+ factors because of presentation or non-significant effects
+,,10 = N is missing
+,,11 = calculated age
+,,12 = assumed trait units through logical deduction
+,,13 = potential confounding factors in experimental design
+,,14 = unknown trait units
+,,"15 = citation was used to get experimental information (sex ratio, etc.)"
+,,16=Substantial delay between oviposition and entering treatment
+comm_text,Text,"Explanations, if needed, for the comments codes."
