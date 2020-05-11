@@ -21,3 +21,4 @@ species_cleaned_final.nwk
 analysis.R
 Tinc_SummaryScript.R
 species_clean copy.csv
+database_org_scaling.R
